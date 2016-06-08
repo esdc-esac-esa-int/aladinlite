@@ -1,0 +1,74 @@
+# build.properties.defaults
+#
+# absi-cl-aladinlite-widget  -  Absi AladinLite GWT Widget
+# Copyright (C) 2014-  ESA - ESAC - Madrid, Spain
+
+### software name & version
+software.name=absi-cl-aladinlite-widget
+software.version=X.x
+
+### compiler flags & options
+javac.source=1.6
+javac.target=1.6
+javac.compiler=javac1.6
+
+javac.nowarn=false
+javac.debug=true
+javac.deprec=true
+
+### archiver flags & options
+jar.compress=true
+jar.index=true
+jar.update=false
+
+### junit flags & options
+junit.summary=true
+junit.output=false
+junit.halt=true
+junit.fork=true
+
+### javadoc flags & options
+javadoc.packages=*
+javadoc.access=protected
+javadoc.fail=true
+
+### checkstyle flags & options
+checkstyle.config=setup/sun_checks.xml
+checkstyle.fail=false
+checkstyle.style=setup/checkstyle.xsl
+lib.checkstyle.jar=lib/checkstyle-4.4.jar
+
+### conf & java directories
+conf.dir=src/conf
+conf.manifest.file=${conf.dir}/MANIFEST.MF
+java.dir=src/java
+
+### build & dist directories
+build.dir=build
+build.classes.dir=${build.dir}/classes
+build.javadoc.dir=${build.dir}/javadoc
+build.testclass.dir=${build.dir}/classes
+build.testwar.dir=${build.dir}/www-test
+build.jureport.dev.dir=${build.dir}/jureport.dev
+build.jureport.prod.dir=${build.dir}/jureport.prod
+build.csreport.dir=${build.dir}/csreport
+
+### distribution & deploy directories
+deploy.dir=war
+deploy.classes.dir=${deploy.dir}/WEB-INF/classes
+deploy.webxml.file=${deploy.dir}/WEB-INF/web.xml
+deploy.gwtoutput.dir=${deploy.dir}/${gwt.module.name}
+deploy.css.dir=${deploy.dir}/css
+deploy.images.dir=${deploy.dir}/images
+deploy.js.dir=${deploy.dir}/js
+dist.dir=dist
+dist.jar.file=${dist.dir}/${software.name}-${software.version}.jar
+final.dir=final
+lib.dir=lib
+
+
+### GWT specific directories & settings
+gwt.args=-style PRETTY
+gwt.entrypoint=esac.archive.absi.modules.cl.aladinlite.widget.Widget
+gwt.localcache.dir=gwt-unitCache
+gwt.module.name=aladinlitewidget

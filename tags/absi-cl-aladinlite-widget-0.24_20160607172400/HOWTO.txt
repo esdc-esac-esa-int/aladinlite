@@ -1,0 +1,38 @@
+ SUMMARY
+~~~~~~~~~
+The following text summarizes how to import this component (mygwtwidget) 
+as a Google Web Toolkit project into Eclipse. That allows to make use of 
+the features the Google Web Toolkit Plugin for Eclipse provides: debugging, 
+JavaScript compilation and others.
+
+ PRE-REQUISITES
+~~~~~~~~~~~~~~~~ 
+Eclipse (tested for Eclipse Helios, Indigo and Kepler)
+Google Plugin For Eclipse (including GWT SDK 2.3.0, 2.4.0 and 2.5.0)
+Subclipse Tigris Plugin For Eclipse
+
+ STEPS
+~~~~~~~ 
+ 1. Open SVN Repository Perspective.
+    Window -> Open Perspective -> SVN Repository Exploring
+ 2. Add SVN Repository to SVN Repositories list
+    Right-click on SVN Repositories tab -> 'New Repository Location' 
+      -> Set Url as http://satscm.esac.esa.int/euclid/vospace
+ 4. Checkout the GWT widget library.       
+    Go to template trunk/components and select 'template-gwt'
+    Right-click -> 'Checkout...'   
+    Select 'Checkout as a project configured using the New Project Wizard'
+    Click 'Finish'
+ 5. Create the project as a Java Project.
+    Select Java Project -> Click 'Next'
+    Set a Project Name, Location and click 'Next'
+    Select 'Source' tab and set 'Set output classes directory to' to 
+      '<project-name>/war/WEB-INF/classes'
+    Click 'Finish'
+ 6. Enable Google Web Toolkit for the project.
+    Right-click the project and select 'Google' -> 'Web Toolkit Settings'
+    Check the 'Use Google Web Toolkit' box and click 'OK' to apply the change
+ 7. (Optional) Run GWT Development Mode
+    Right-click the project and select 'Run As' -> 'Web Application'  
+      
+ 

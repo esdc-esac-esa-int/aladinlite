@@ -1,0 +1,10 @@
+# build.properties.dev
+#
+# absi-cl-aladinlite-widget  -  Absi AladinLite GWT Widget
+# Copyright (C) 2014-  ESA - ESAC - Madrid, Spain
+
+### target flags & options
+server.host=
+server.user=
+server.instdir=
+server.context=

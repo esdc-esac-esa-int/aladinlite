@@ -1,0 +1,22 @@
+// Coo
+	format: function (t) {
+        isNaN(this.lon) && this.computeLonLat();
+        var e = "",
+            i = "";
+        if (t.indexOf("d") >= 0) e = Numbers.format(this.lon, this.prec), i = Numbers.format(this.lat, this.prec);
+        else var o = this.lon / 15,
+        	e = Numbers.toSexagesimal(o, 7, !1),
+        	i = Numbers.toSexagesimal(this.lat, 6, !0);
+        return this.lat > 0 && (i=" "+i), t.indexOf("/") >= 0 ? e + " " + i : t.indexOf("2") >= 0 ? [e, i] : e + i
+    }
+
+// View
+, t.prototype.getRaDec = function(x,y) { // ESA: code to get sky coordinates from canvas position
+  var o = AladinUtils.viewToXy(x,y,this.width, this.height, this.largestDim, this.zoomFactor);
+  var c = this.projection.unproject(o.x,o.y);	
+  return c;    
+}
+// Aladin  
+,  t.prototype.getRaDec = function (x,y) { // ESA: code to get sky coordinates from canvas position
+    return this.view.getRaDec(x,y)
+}
